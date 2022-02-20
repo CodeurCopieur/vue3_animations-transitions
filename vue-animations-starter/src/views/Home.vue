@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <Toast v-if="showToast" />
+    <transition name="toast">
+      <Toast v-if="showToast" />
+    </transition>
     <Todos @badValue="triggerToast" />
   </div>
 </template>
@@ -26,5 +28,8 @@ export default {
 </script>
 
 <style>
-
+ /* enter or leave classes */
+ .toast-enter-from, .toast-leave-to {opacity: 0; transform: translateY(-60px);}
+ .toast-enter-to, .toast-leave-from {opacity: 1;transform: translateY(0);}
+ .toast-enter-active, .toast-leave-active { transition: all .3s ease;}
 </style>
