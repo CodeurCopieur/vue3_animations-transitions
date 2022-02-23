@@ -8,7 +8,7 @@
     />
     <div v-if="todos.length">
       <ul>
-        <transition-group tag="ul" name="list">
+        <transition-group tag="ul" name="list" appear>
           <li v-for="todo in todos" :key="todo.id" @click="deleteTodo(todo.id)">
             {{ todo.text }}
           </li>
@@ -86,6 +86,10 @@ export default {
 
   .list-enter-from, .list-leave-to{opacity: 0; transform: scale(.6);}
   .list-enter-to, .list-leave-from{opacity: 1; transform: scale(1);}
-  .list-enter-active, .list-leave-active{ transition: all 0.4s ease;}
+  .list-enter-active, .list-leave-active{ transition: all 0.4s ease; position: absolute;}
+
+  .list-move {
+    transition: all .3s ease;
+  }
 
 </style>
