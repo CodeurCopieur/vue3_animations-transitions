@@ -8,9 +8,12 @@
     />
     <div v-if="todos.length">
       <ul>
-        <li v-for="todo in todos" :key="todo.id" @click="deleteTodo(todo.id)">
-          {{ todo.text }}
-        </li>
+        <transition-group tag="ul" name="list">
+          <li v-for="todo in todos" :key="todo.id" @click="deleteTodo(todo.id)">
+            {{ todo.text }}
+          </li>
+        </transition-group>
+        
       </ul>
     </div>
     <div v-else>Woohoo, nothing left todo!</div>
@@ -79,4 +82,10 @@ export default {
   .todos li:hover {
     cursor: pointer;
   }
+  /* list transitions */
+
+  .list-enter-from, .list-leave-to{opacity: 0; transform: scale(.6);}
+  .list-enter-to, .list-leave-from{opacity: 1; transform: scale(1);}
+  .list-enter-active, .list-leave-active{ transition: all 0.4s ease;}
+
 </style>
