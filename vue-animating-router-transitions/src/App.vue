@@ -10,11 +10,11 @@ import HelloWorld from './components/HelloWorld.vue'
      <router-link class="p-2 font-bold mr-4 hover:bg-sky-500 hover:text-zinc-50" to="/guide">Guide</router-link>
    </nav>
   
-   <router-view v-slot="{ Component }">
+   <router-view v-slot="{ Component, route }">
      <transition 
-      enter-active-class="animate__animated animate__fadeInLeft"
-      leave-active-class="animate__animated animate__fadeOutLeft"
-      name="fade" mode="out-in">
+      :enter-active-class="route.meta.enterCLass"
+      :leave-active-class="route.meta.leaveCLass"
+      mode="out-in">
       <component :is="Component"></component>
      </transition>
    </router-view>
