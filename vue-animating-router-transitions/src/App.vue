@@ -9,8 +9,12 @@ import HelloWorld from './components/HelloWorld.vue'
      <router-link class="p-2 font-bold mr-4 hover:bg-sky-500 hover:text-zinc-50" to="/">Home</router-link>
      <router-link class="p-2 font-bold mr-4 hover:bg-sky-500 hover:text-zinc-50" to="/guide">Guide</router-link>
    </nav>
-
-   <router-view></router-view>
+  
+   <router-view v-slot="{ Component }">
+     <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+     </transition>
+   </router-view>
  </div>
   
 </template>
@@ -28,4 +32,15 @@ a.router-link-active {
   background-color: rgb(14, 165, 233);
   color: rgb(250, 250, 250);
 }
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s ease-out;
+}
+
 </style>
