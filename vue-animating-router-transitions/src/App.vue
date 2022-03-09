@@ -11,7 +11,10 @@ import HelloWorld from './components/HelloWorld.vue'
    </nav>
   
    <router-view v-slot="{ Component }">
-     <transition name="fade" mode="out-in">
+     <transition 
+      enter-active-class="animate__animated animate__fadeInLeft"
+      leave-active-class="animate__animated animate__fadeOutLeft"
+      name="fade" mode="out-in">
       <component :is="Component"></component>
      </transition>
    </router-view>
