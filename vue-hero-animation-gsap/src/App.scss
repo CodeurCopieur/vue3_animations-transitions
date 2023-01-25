@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #2c3e50;
+
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -10,6 +10,99 @@
 
 .hero {
   height: 100vh;
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 24px;
+    height: 100vh;
+  }
+
+  &-content {
+    width: 50%;
+  }
+
+  &-content-inner {
+    width: 400px;
+    margin: 0 auto;
+    color: #323232;
+    
+    h1 {
+      display: flex;
+      flex-direction: column;
+
+      font-weight: 500;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+
+      .hero-content-line {
+        margin: 0;
+        height: 44px;
+        overflow: hidden;
+      }
+    }
+
+    p {
+      font-size: .875rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      padding-right: 3rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .btn-row {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 56px;
+        height: 1px;
+        background: #dfdfdf;
+        top: 50%;
+        left: -68px;
+      }
+
+      button {
+        background: none;
+        border: none;
+        font-size: 12px;
+        padding: 0;
+        cursor: pointer;
+
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .7px;
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        &:focus{
+          outline: none;
+        }
+
+        .arrow-icon {
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #007fff;
+          height: 42px;
+          width: 42px;
+          border-radius: 100px;
+          left: 80px;
+        } 
+      } 
+    }
+  }
+
+  &-images {
+    width: 50%;
+    height: 100vh;
+    position: relative;
+  }
 }
 
 .container {
