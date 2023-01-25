@@ -8,6 +8,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;700&display=swap');
 
+@mixin aspect-ratio($width, $height, $displayType: block, $important:false) {
+
+  display: $displayType;
+  position: relative;
+  height: 0;
+
+  @if $important {
+    padding-top: ($height / $width) * 100% !important;
+  }
+  @else {
+    padding-top: ($height / $width) * 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
 .hero {
   height: 100vh;
 
@@ -102,6 +125,41 @@
     width: 50%;
     height: 100vh;
     position: relative;
+  }
+
+  &-images-inner {
+
+  }
+
+  &-image {
+
+    position: absolute;
+    overflow: hidden;
+
+    div{
+      @include aspect-ratio(1, 1);
+    }
+    picture {
+      
+    }
+
+    &.girl {
+      top: 0;
+      right: 0;
+      width: 45%;
+      height: 50%;
+    }
+
+    &.boy {
+      bottom: 24px;
+      left: 0;
+      width: 52%;
+      height: 65%;
+    }
+
+    img {
+      height: auto!important;
+    }
   }
 }
 

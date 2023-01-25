@@ -41,10 +41,18 @@ import imgBoy from '../assets/boy.webp'
         <div class="hero-images">
           <div class="hero-images-inner">
             <div class="hero-image girl">
-              <img :src="`${imgGirl}`" alt="girl">
+              <div>
+                <picture>
+                  <img :src="`${imgGirl}`" alt="girl">
+                </picture>
+              </div>
             </div>
             <div class="hero-image boy">
-              <img :src="`${imgBoy}`" alt="boy">
+              <div>
+                <picture>
+                  <img :src="`${imgBoy}`" alt="boy">
+                </picture>
+              </div>
             </div>
           </div>
         </div>
