@@ -27,7 +27,7 @@ import imgBoy from '../assets/boy.webp'
                 <span class="hero-content-line-inner">lorem ipsum.</span>
               </span>
             </h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis adipisci totam, aperiam laborum pariatur aut porro vero quod ex minima!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis adipisci totam, aperiam laborum pariatur aut porro vero quod ex minima !</p>
             <div class="btn-row">
               <button class="explore-button">
                 explore
