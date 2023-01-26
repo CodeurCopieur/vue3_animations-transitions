@@ -125,10 +125,6 @@
     position: relative;
   }
 
-  &-images-inner {
-
-  }
-
   &-image {
 
     position: absolute;
@@ -136,9 +132,6 @@
 
     div{
       @include aspect-ratio(1, 1);
-    }
-    picture {
-      
     }
 
     &.girl {
