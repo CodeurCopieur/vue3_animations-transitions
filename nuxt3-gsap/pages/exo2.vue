@@ -16,14 +16,14 @@ let title = ref(null);
 
     gsap.defaults({ease: "none", duration: 2});
 
-ScrollTrigger.create({
-  trigger: ".green",
-  start: 'top top',
-  end: '+=1000px',
-  scrub: true,
-  markers: true,
-  pin: true
-})
+    ScrollTrigger.create({
+      trigger: ".green",
+      start: 'top top',
+      end: '+=1000px',
+      scrub: true,
+      markers: true,
+      pin: true
+    })
   });
   </script>
 <template>
