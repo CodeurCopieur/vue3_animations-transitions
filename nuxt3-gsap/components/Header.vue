@@ -5,7 +5,7 @@
       <ul class="flex gap-4">
         <li><NuxtLink to="/">Home</NuxtLink></li>
         <li><NuxtLink to="/exo1">Exo 1</NuxtLink></li>
-        <li><NuxtLink to="/exo2" class="btn">Exo 2</NuxtLink></li>
+        <li><NuxtLink to="/exo2">Exo 2</NuxtLink></li>
         <li><NuxtLink to="/exo3">Exo 3</NuxtLink></li>
       </ul>
     </nav>
